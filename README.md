@@ -23,6 +23,7 @@ read(fd, &buffer, 4);
 **[Код:](https://github.com/VladHume/pr8/blob/main/task8_2.c)**
 
 **Результат**
+
 ![image](https://github.com/user-attachments/assets/18e3365b-8dc0-4fa8-b2dc-8e5d1acab172)
 
 У ході виконання завдання стикнувся з помилкою, що в sh на відміну від bash printf не дотримується форматування і записує не байти, а буквально передані символи, тому довелося встановити bash за допомогою 
@@ -44,6 +45,7 @@ printf "\x04\x05\x02\x02\x03\x03\x07\x09\x01\x05" > testfile.bin
 **Висновок:** Найгіршим є випадок при чередуванні великих та малих значень, за логікою всі однакові значення та відсортований масив у зворотньому порядку теж мали б бути повільними, проте у qsort реалізовано обробку цих випадків  
 
 **[Код:](https://github.com/VladHume/pr8/blob/main/task8_3.c)**
+
 ![image](https://github.com/user-attachments/assets/4a5e2288-0ccd-4eb3-b5c2-688a3769655b)
 
 
