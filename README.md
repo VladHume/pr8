@@ -69,6 +69,7 @@ printf "\x04\x05\x02\x02\x03\x03\x07\x09\x01\x05" > testfile.bin
 **[Код:](https://github.com/VladHume/pr8/blob/main/task8_5.c)**
 
 **Результат**
+
 ![image](https://github.com/user-attachments/assets/64fa240e-de9d-4b49-ab33-9f6c8947eeb3)
 
 Створення тестового файлу:
