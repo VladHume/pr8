@@ -24,7 +24,7 @@ void test_sort(int *arr, int size) {
 }
 
 int main() {
-    int size = 100000; 
+    int size = 10000000; 
     int *arr = malloc(size * sizeof(int));
 
     printf("Testing worst case (descending order)...\n");
