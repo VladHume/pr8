@@ -5,35 +5,7 @@
 
 **Відповідь:** Так, таке можливо. Наприклад, при записі в канали, сокети, файли з обмеженням буфера, або якщо запис переривається сигналом. У таких випадках `write` може записати менше байтів, ніж було запрошено.  
 
-**Приклад програми:**
-```c
-#include <fcntl.h>
-#include <unistd.h>
-#include <stdio.h>
-
-int main() {
-    int fd[2];
-    char buffer[] = "Test write to pipe with limited read side";
-    ssize_t nbytes = sizeof(buffer);
-    ssize_t count;
-
-    pipe(fd);
-    if (fork() == 0) {
-        close(fd[1]);
-        sleep(2);
-        char read_buf[10];
-        read(fd[0], read_buf, sizeof(read_buf));
-        return 0;
-    } else {
-        close(fd[0]);
-        count = write(fd[1], buffer, nbytes);
-        printf("Запитували записати %zd байтів, записано %zd байтів\n", nbytes, count);
-        return 0;
-    }
-}
-```
-
----
+**[Код:](https://github.com/VladHume/pr8/blob/main/task8_1.c)**
 
 ## Завдання 8.2  
 **Умова:** Вміст файлу: `4, 5, 2, 2, 3, 3, 7, 9, 1, 5`  
